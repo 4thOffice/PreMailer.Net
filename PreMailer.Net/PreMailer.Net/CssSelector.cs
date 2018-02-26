@@ -1,10 +1,12 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 
 namespace PreMailer.Net
 {
 	public class CssSelector
 	{
-		protected static Regex NotMatcher = new Regex(@":not\((.+)\)", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    private static TimeSpan RegexTimespan = new TimeSpan(0, 3, 0);
+    protected static Regex NotMatcher = new Regex(@":not\((.+)\)", RegexOptions.IgnoreCase | RegexOptions.Compiled, RegexTimespan);
 
 		public string Selector { get; protected set; }
 

@@ -21,13 +21,14 @@ namespace PreMailer.Net
 		private static readonly string Css_String1 = string.Format(@"(""([^\n\r\f\\""]|\\{0}|{1}|{2})*"")", Css_Nl, Css_NonAscii, Css_Escape);
 		private static readonly string Css_String2 = string.Format(@"('([^\n\r\f\\']|\\{0}|{1}|{2})*')", Css_Nl, Css_NonAscii, Css_Escape);
 		private static readonly string Css_String = string.Format(@"({0}|{1})", Css_String1, Css_String2);
-		#endregion
+    #endregion
 
-		// These definitions have been taken from https://www.w3.org/TR/css3-selectors/#grammar
-		private static readonly Regex IdMatcher = new Regex(String.Format(@"#{0}", Css_Ident), RegexOptions.IgnoreCase | RegexOptions.Compiled);
-		private static readonly Regex AttribMatcher = new Regex(String.Format(@"\[\s*{0}\s*(([$*^~|]?=)\s*({0}|{1})\s*)?\]", Css_Ident, Css_String), RegexOptions.IgnoreCase | RegexOptions.Compiled);
-		private static readonly Regex ClassMatcher = new Regex(String.Format(@"\.{0}", Css_Ident), RegexOptions.IgnoreCase | RegexOptions.Compiled);
-		private static readonly Regex ElemMatcher = new Regex(Css_Ident, RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    // These definitions have been taken from https://www.w3.org/TR/css3-selectors/#grammar
+    private static TimeSpan RegexTimespan = new TimeSpan(0, 3, 0);
+    private static readonly Regex IdMatcher = new Regex(String.Format(@"#{0}", Css_Ident), RegexOptions.IgnoreCase | RegexOptions.Compiled, RegexTimespan);
+		private static readonly Regex AttribMatcher = new Regex(String.Format(@"\[\s*{0}\s*(([$*^~|]?=)\s*({0}|{1})\s*)?\]", Css_Ident, Css_String), RegexOptions.IgnoreCase | RegexOptions.Compiled, RegexTimespan);
+		private static readonly Regex ClassMatcher = new Regex(String.Format(@"\.{0}", Css_Ident), RegexOptions.IgnoreCase | RegexOptions.Compiled, RegexTimespan);
+		private static readonly Regex ElemMatcher = new Regex(Css_Ident, RegexOptions.IgnoreCase | RegexOptions.Compiled, RegexTimespan);
 		private static readonly Regex PseudoClassMatcher = BuildOrRegex(PseudoClasses, ":", x => x.Replace("()", String.Format(@"\({0}\)", Css_Ident)));
 		private static readonly Regex PseudoElemMatcher = BuildOrRegex(PseudoElements, "::?");
 		private static readonly Regex PseudoUnimplemented = BuildOrRegex(UnimplementedPseudoSelectors, "::?");
@@ -222,7 +223,7 @@ namespace PreMailer.Net
 			}
 
 			sb.Append(")");
-			return new Regex(sb.ToString(), RegexOptions.IgnoreCase | RegexOptions.Compiled);
+			return new Regex(sb.ToString(), RegexOptions.IgnoreCase | RegexOptions.Compiled, RegexTimespan);
 		}
 	}
 }

@@ -1,18 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PreMailer.Net", "PreMailer.Net\PreMailer.Net.xproj", "{4FD99B58-5FCD-4D2D-92F6-1C7BBAE6CCB0}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PreMailer.Net.Tests", "PreMailer.Net.Tests\PreMailer.Net.Tests.xproj", "{19A50897-9630-483A-B222-8E50CAB720BE}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{965B1D5F-8DCB-4D0D-8B38-93BD0E72BCFE}"
 	ProjectSection(SolutionItems) = preProject
 		..\appveyor.yml = ..\appveyor.yml
-		global.json = global.json
 		..\README.md = ..\README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PreMailer.Net", "PreMailer.Net\PreMailer.Net.csproj", "{4FD99B58-5FCD-4D2D-92F6-1C7BBAE6CCB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PreMailer.Net.Tests", "PreMailer.Net.Tests\PreMailer.Net.Tests.csproj", "{19A50897-9630-483A-B222-8E50CAB720BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F11CE36A-14AD-497C-9B77-85C772908B48}
 	EndGlobalSection
 EndGlobal
