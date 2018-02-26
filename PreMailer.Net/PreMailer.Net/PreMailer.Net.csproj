@@ -4,18 +4,19 @@
     <Description>PreMailer.Net is a C# utility for moving CSS to inline style attributes, to gain maximum E-mail client compatibility.</Description>
     <AssemblyTitle>PreMailer.Net</AssemblyTitle>
     <VersionPrefix>1.6.0</VersionPrefix>
-    <Authors>martinnormark</Authors>
+    <Authors>sherlock1982</Authors>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AssemblyName>PreMailer.Net</AssemblyName>
-    <PackageId>PreMailer.Net</PackageId>
+    <PackageId>PreMailer.Loop.Net</PackageId>
     <PackageTags>email;css;newsletter;html</PackageTags>
     <PackageReleaseNotes>Support for .NET Core https://github.com/milkshakesoftware/PreMailer.Net/issues/96</PackageReleaseNotes>
     <PackageIconUrl>https://github.com/milkshakesoftware/PreMailer.Net/raw/master/icon.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/milkshakesoftware/PreMailer.Net</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/milkshakesoftware/PreMailer.Net/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/milkshakesoftware/PreMailer.Net</RepositoryUrl>
+    <RepositoryUrl>https://github.com/4thOffice/PreMailer.Net</RepositoryUrl>
     <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
