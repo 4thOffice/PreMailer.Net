@@ -4,7 +4,7 @@
     <Description>PreMailer.Net is a C# utility for moving CSS to inline style attributes, to gain maximum E-mail client compatibility.</Description>
     <AssemblyTitle>PreMailer.Net</AssemblyTitle>
     <VersionPrefix>1.6.0</VersionPrefix>
-    <Authors>sherlock1982</Authors>
+    <Authors>martinnormark</Authors>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AssemblyName>PreMailer.Net</AssemblyName>
     <PackageId>PreMailer.Loop.Net</PackageId>
